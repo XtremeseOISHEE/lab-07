@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" >
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="styles2.css" />
+        <title>Survey-Form Project</title>
+    </head>
+    <body>
+        <h1 id="title">Platform-Free Website-Builder</h1>
+        <p id="description">Have you used our platform? <a href="https://www.freecodecamp.org/">Learn More</a>.<br> Thank you for taking the Survey</p>
+        <form id="survey-form" method="post" action="https://register-demo.freecodecamp.org">
+            <fieldset>
+                <label id="name-label" for="name">Name: <input id="name" name="name" type="text" placeholder="Enter Your Full-Name" required /></label>
+                <label id="email-label" for="email">Email: <input id="email" name="email" type="email" placeholder="example@gmail.com" required /></label>
+                <label id="number-label" for="number">Age: <input id="number" name="age" type="number" min="18" max="40" placeholder="Age range (18-40)" required /></label>
+            </fieldset>
+            <fieldset>
+                <legend><h3>Your Purpose for using our Platform: </h3></legend>
+                <label id="pad" for="commercial"><input id="commercial" type="radio" name="commercialornon" class="inline" value="commercial" checked>Commercial</label>
+                <label id="padding" for="non-commercial"><input id="non-commercial" type="radio" name="commercialornon" class="inline" value="non-commercial">Non-Commercial</label>
+                <label for="dropdown"><h3>Which mode did u use?</h3>
+                <select name="dropdown" id="dropdown">
+                    <option value="">select one</option>
+                    <option value="1"> Student</option>
+                    <option value="2">Tester</option>
+                    <option value="3">Community Edition</option>
+                    <option value="4">Professional Edition</option>
+                </select>
+                </label>
+            </fieldset>
+            <fieldset>
+                <legend><h3>Check your experienced services:</h3></legend>
+                <label for="Domain Names"><input class="inline" id="Domain Names" type="checkbox"   value="Domain Names">Domain Names</label>
+                <label for="Web Hosting"><input class="inline" id="Web Hosting" type="checkbox"   value="Web Hosting">Web Hosting</label>
+                <label for="Website Security"><input class="inline" id="Website Security" type="checkbox"   value="Website Security">Website Security</label>
+                <label for="Website Design"><input class="inline" id="Website Design" type="checkbox" value="Website Design">Website Design</label>
+                <label for="Website Builder"><input class="inline" id="Website Builder" type="checkbox"  value="Website Builder">Website Builder</label>
+                <label for="AI Website Builder"><input class="inline" id="AI Website Builder" type="checkbox"  value="AI Website Builder">AI Website Builder</label>
+                <label for="Portfolio"><input class="inline" id="Portfolio" type="checkbox"  value="Portfolio" >Portfolio</label>
+                <label for="Scheduling"><input class="inline" id="Scheduling" type="checkbox"   value="Scheduling">Scheduling</label>
+                <label for="Blogs"><input class="inline" id="Blogs" type="checkbox"   value="Blogs">Blogs</label>
+                <label for="E-Commerce"><input class="inline" id="E-Commerce" type="checkbox"   value="E-Commerce">E-Commerce</label>
+            </fieldset>
+            <fieldset> 
+                <label for="suggestion">Any Suggestion to make:
+                <textarea id="suggestion" name="suggestion" rows="3" cols="30" placeholder="write ur suggestion."></textarea>
+               </label>
+                <input id="submit" type="submit" value="Submit" />
+            </fieldset>
+        </form>
+    </body>
+</html>
