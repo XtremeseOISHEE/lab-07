@@ -1,0 +1,100 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    height: 100vh; /* Full viewport height */
+}
+
+.left-side {
+    flex: 1; /* Takes up 50% of the width */
+    background-image: url(https://i.pinimg.com/564x/9f/20/82/9f20820d8f2a4420c111206a5b193ea6.jpg);
+    background-position: left center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.right-side {
+    flex: 1; /* Takes up 50% of the width */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffcc99;
+    padding: 20px;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    justify-content: center;
+    margin: 20px auto;
+    
+    
+}
+h1 {
+    font-size: 3em; /* Increase the font size */
+    font-weight: bold; /* Make it bold */
+    color: #804c36; /* Dark color for contrast */
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.3); /* Add a subtle shadow */
+    margin-bottom: 20px; /* Add space below the heading */
+    letter-spacing: 2px; /* Space out the letters slightly */
+}
+.cell {
+    background-color: #f0f0f0;
+    border: 2px solid #999999;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#status {
+    margin-top: 20px;
+    font-size: 1.5em;
+}
+
+#restart {
+    margin-top: 10px;
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    background-color: #f0f0f0
+    border: 2px solid #999999;
+    color: #804c36; 
+}
+.status-turn {
+    color: #333; /* Default color */
+}
+
+/* Styling for winning message */
+.status-win {
+    color: green; /* Green for a win */
+    font-weight: bold; /* Bold to emphasize the win */
+    text-shadow: 2px 2px 5px rgba(0, 255, 0, 0.5); /* Add a glowing effect */
+}
+
+/* Styling for draw message */
+.status-draw {
+    color: orange; /* Orange for a draw */
+    font-style: italic; /* Italic style for a draw */
+}
+/* Styling for Player X's turn */
+.status-turn-x {
+    color: #804c36;; /* Change this to your preferred color */
+    font-weight: bold; /* Make it bold */
+}
+
+/* Styling for Player O's turn */
+.status-turn-o {
+    color: #804c36;; /* Change this to your preferred color */
+    font-weight: bold; /* Make it bold */
+}
