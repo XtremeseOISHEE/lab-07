@@ -1,0 +1,96 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    position: sticky; /* Keeps the navbar at the top of the viewport */
+    top: 0;
+    z-index: 1000;
+}
+
+#header-img {
+    width: 100px; /* Logo size */
+}
+
+#nav-bar {
+    display: flex; /* Use Flexbox for nav items */
+}
+
+.nav-link {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    display: flex; /* Display flex for icon and text alignment */
+    align-items: center; /* Center items vertically */
+}
+
+.nav-link i {
+    margin-right: 5px; /* Space between icon and text */
+}
+
+.nav-link:hover {
+    text-decoration: underline; /* Underline effect on hover */
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin: 20px 0;
+}
+
+#video {
+    width: 100%;
+    height: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column; /* Stacks the input elements vertically */
+    gap: 10px; /* Space between inputs */
+}
+
+.color-flexbox {
+    display: flex; /* Use flexbox for colors */
+    flex-wrap: wrap; /* Allow wrapping */
+    gap: 10px; /* Space between color boxes */
+}
+
+.color-box {
+    width: 100px; /* Width of each color box */
+    height: 100px; /* Height of each color box */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column; /* Stack header items on smaller screens */
+        align-items: flex-start;
+    }
+
+    #nav-bar {
+        flex-direction: column; /* Stack nav items vertically */
+        margin-top: 10px;
+    }
+
+    .nav-link {
+        margin: 5px 0; /* Adjust spacing between nav links */
+    }
+}

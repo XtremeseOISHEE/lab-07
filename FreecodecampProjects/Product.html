@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barzer Color Bank</title>
+    <link rel="stylesheet" href="product.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header id="header">
+        <img id="header-img" src="https://www.bergerbd.com/wp-content/uploads/2024/09/Robbialac1920-x-640.png" alt="Barzer Color Bank Logo">
+        <nav id="nav-bar">
+            <a href="#product" class="nav-link"><i class="fas fa-box"></i> Product</a>
+            <a href="#pricing" class="nav-link"><i class="fas fa-tag"></i> Pricing</a>
+            <a href="#colors" class="nav-link"><i class="fas fa-paint-brush"></i> Available Colors</a>
+            <a href="#shipping" class="nav-link"><i class="fas fa-truck"></i> Shipping</a>
+            <a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+            <a href="#login" class="nav-link"><i class="fas fa-user"></i> Login</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="product">
+            <h1>Welcome to Barzer Color Bank</h1>
+            <p>Your one-stop solution for all your color needs!</p>
+            <iframe id="video" width="560" height="315" src="https://www.youtube.com/embed/tgbNymZ7vqY" title="Embedded video" frameborder="0" allowfullscreen></iframe>
+        </section>
+
+        <section id="pricing">
+            <h2>Pricing</h2>
+            <p>Our pricing is competitive, with options for all budgets:</p>
+            <ul>
+                <li>Standard Color Pack: $20</li>
+                <li>Premium Color Pack: $35</li>
+                <li>Deluxe Color Pack: $50</li>
+            </ul>
+        </section>
+
+        <section id="colors">
+            <h2>Available Colors</h2>
+            <div class="color-flexbox">
+                <div class="color-box" style="background-color: red;">Red</div>
+                <div class="color-box" style="background-color: green;">Green</div>
+                <div class="color-box" style="background-color: blue;">Blue</div>
+                <div class="color-box" style="background-color: yellow;">Yellow</div>
+                <div class="color-box" style="background-color: orange;">Orange</div>
+                <div class="color-box" style="background-color: purple;">Purple</div>
+            </div>
+        </section>
+
+        <section id="shipping">
+            <h2>Shipping Information</h2>
+            <p>We offer shipping worldwide! Delivery times vary based on your location.</p>
+            <p>Standard shipping: 5-7 business days.</p>
+            <p>Express shipping: 2-3 business days.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form id="form" action="https://www.freecodecamp.com/email-submit" method="POST">
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                <input type="submit" id="submit" value="Submit">
+            </form>
+        </section>
+
+        <section id="login">
+            <h2>Login to Order</h2>
+            <form id="login-form" action="https://www.freecodecamp.com/email-submit" method="POST">
+                <input type="email" id="login-email" name="email" placeholder="Enter your email to login" required>
+                <input type="password" id="login-password" name="password" placeholder="Enter your password" required>
+                <input type="submit" value="Login">
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Barzer Color Bank</p>
+    </footer>
+</body>
+</html>

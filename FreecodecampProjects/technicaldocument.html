@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+  <title>React Documentation</title>
+  <link rel="stylesheet" href="techdoccss.css">
+</head>
+<body>
+
+  <!-- Navbar Section -->
+  <nav id="navbar">
+    <header>Get Started</header>
+    <a href="#Introduction" class="nav-link">Introduction</a>
+    <a href="#Creating_and_nesting_components" class="nav-link">Creating and nesting components</a>
+    <a href="#Writing_markup_with_JSX" class="nav-link">Writing markup with JSX</a>
+    <a href="#Adding_styles" class="nav-link">Adding styles</a>
+    <a href="#Examples" class="nav-link">Examples</a>
+  </nav>
+
+  <!-- Main Documentation Section -->
+  <main id="main-doc">
+    <!-- Section 1 -->
+    <section id="Introduction" class="main-section">
+      <header>Introduction</header>
+      <p><strong>Welcome to the React documentation! This page will give you an introduction to the 80% of React concepts that you will use on a daily basis.</strong></p>
+      <br>
+      <p>You will learn.</p>
+      <br>
+      <ul>
+        <li>How to create and nest components</li>
+        <li>How to add markup and styles</li>
+        <li>How to display data</li>
+        <li>How to render conditions and lists</li>
+        <li>How to respond to events and update the screen</li>
+        <li>How to share data between components</li>
+      </ul>
+    </section>
+
+    <!-- Section 2 -->
+    <section id="Creating_and_nesting_components" class="main-section">
+      <header>Creating and nesting components</header>
+      <p>React apps are made out of components. A component is a piece of the UI (user interface) that has its own logic and appearance. A component can be as small as a button, or as large as an entire page.</p>
+      <br>
+      <p>React components are JavaScript functions that return markup:</p>
+      <br>
+      <code>function MyButton() {
+        return (
+          &lt;button&gt;I'm a button&lt;/button&gt;
+        );
+      }</code>
+      <br>
+      <p>Now that you’ve declared MyButton, you can nest it into another component:</p>
+      <br>
+      <code>export default function MyApp() {
+        return (
+          &lt;div&gt;
+            &lt;h1&gt;Welcome to my app&lt;/h1&gt;
+            &lt;MyButton /&gt;
+          &lt;/div&gt;
+        );
+      }</code>
+      <br>
+      <p>Notice that "&lt;MyButton /&gt;" starts with a capital letter. That’s how you know it’s a React component. React component names must always start with a capital letter, while HTML tags must be lowercase.</p>
+      <br>
+      <p>Have a look at the result:</p>
+      <br>
+      <div class="container">
+        <code>function MyButton() {
+            return (
+              &lt;button&gt;
+                I'm a button
+              &lt;/button&gt;
+            );
+          }
+          
+          export default function MyApp() {
+            return (
+              &lt;div&gt;
+                &lt;h1&gt;Welcome to my app&lt;/h1&gt;
+                &lt;MyButton /&gt;
+              &lt;/div&gt;
+            );
+          }</code>
+        <img src="https://png.pngtree.com/templates/20190719/ourmid/pngtree-close-close-button-icon-ico-image_271575.jpg" alt="Description of image" class="side-image">
+      </div>
+      <p>The export default keywords specify the main component in the file. If you’re not familiar with some piece of JavaScript syntax, MDN and javascript.info have great references.</p>
+    </section>
+
+    <!-- Section 3 -->
+    <section id="Writing_markup_with_JSX" class="main-section">
+      <header>Writing markup with JSX</header>
+      <p>The markup syntax you’ve seen above is called JSX. It is optional, but most React projects use JSX for its convenience. All of the tools we recommend for local development support JSX out of the box.</p>
+      <p>JSX is stricter than HTML. You have to close tags like &lt;br /&gt;. Your component also can’t return multiple JSX tags. You have to wrap them into a shared parent, like a &lt;div&gt;...&lt;/div&gt; or an empty &lt;&gt;...&lt;/&gt; wrapper:</p>
+      <code>function AboutPage() {
+        return (
+          &lt;&gt;
+            &lt;h1&gt;About&lt;/h1&gt;
+            &lt;p&gt;Hello there.&lt;br /&gt;How do you do?&lt;/p&gt;
+          &lt;&gt;
+        );
+      }</code>
+      <p>If you have a lot of HTML to port to JSX, you can use an online converter.</p>
+    </section>
+
+    <!-- Section 4 -->
+    <section id="Adding_styles" class="main-section">
+      <header>Adding styles</header>
+      <p>In React, you specify a CSS class with className. It works the same way as the HTML class attribute:</p>
+      <code>&lt;img className="avatar" /&gt;</code>
+      <p>Then you write the CSS rules for it in a separate CSS file:</p>
+      <code>/* In your CSS */
+        .avatar {
+          border-radius: 50%;
+        }</code>
+      <p>React does not prescribe how you add CSS files. In the simplest case, you’ll add a &lt;link&gt; tag to your HTML. If you use a build tool or a framework, consult its documentation to learn how to add a CSS file to your project.</p>
+      <p>&lt;h1&gt;Displaying data&lt;/h1&gt;</p>
+      <p>JSX lets you put markup into JavaScript. Curly braces let you “escape back” into JavaScript so that you can embed some variable from your code and display it to the user. For example, this will display user.name:</p>
+      
+      <code>return (
+        &lt;h1&gt;
+          {user.name}
+        &lt;/h1&gt;
+      );</code>
+      <p>You can also “escape into JavaScript” from JSX attributes, but you have to use curly braces instead of quotes. For example, className="avatar" passes the "avatar" string as the CSS class, but src={user.imageUrl} reads the JavaScript user.imageUrl variable value, and then passes that value as the src attribute:</p>
+      <code>return (
+        &lt;img
+          className="avatar"
+          src={user.imageUrl}
+        /&gt;
+      );</code>
+      <p>You can put more complex expressions inside the JSX curly braces too, for example, string concatenation:</p>
+      <div class="container">
+        <code>return (
+            &lt;&gt;
+              &lt;h1&gt;{user.name}&lt;/h1&gt;
+              &lt;img
+                className="avatar"
+                src={user.imageUrl}
+                alt={'Photo of ' + user.name}
+                style={{
+                  width: user.imageSize,
+                  height: user.imageSize
+                }}
+              /&gt;
+            &lt;&gt;
+          );
+        </code>
+        <img src="https://png.pngtree.com/templates/20190719/ourmid/pngtree-close-close-button-icon-ico-image_271575.jpg" alt="Description of image" class="side-image">
+      </div>
+    </section>
+
+    <!-- Section 5 -->
+    <section id="Examples" class="main-section">
+      <header>Examples</header>
+      <p>Here are some example use cases:</p>
+      <p>Basic example of a GET request:</p>
+      <code>fetch('/api/resource')</code>
+      <ul>
+        <li>Request data</li>
+        <li>Parse response</li>
+      </ul>
+    </section>
+  </main>
+
+</body>
+</html>
